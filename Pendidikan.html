@@ -41,6 +41,22 @@
       display: block;
       margin: 0 auto;
     }
+    /* Table Styling */
+    table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        /* Table Size */
+        table {
+            width: 50%;
+        }
+
+        /* Padding Spacing */
+        td, th {
+            padding: 10px;
+            text-align: left;
+        }
   </style>
   </head>
   <body>
@@ -65,16 +81,74 @@
           <p>Seragam SD menggunakan warna Merah Putih yang mengartikan Energi dan Semangat Tinggi.</p>
           <img src="https://www.fakta.id/media/uploads/7/36d239d4b6cbd09261bbd0e12f5dac2a.jpg" alt="Ilustrasi Pendidikan">
       </section>
-      <section>
-        <h2>Gambar Pendidikan Sekolah Menengah Pertama (SMP)</h2>
-        <p>Seragam SMP menggunakan warna Biru Putih yang mengartikan Rasa percaya diri dan semangat tinggi.</p>
-        <img src="https://assets.ayobandung.com/crop/0x0:0x0/750x500/webp/photo/2023/05/19/Ilustrasi-5-SMP-Swasta-Terbaik-di-Bandung-Rekomendasi-PPDB-2023-2573261228.jpg" alt="Ilustrasi Pendidikan">
+      <h1>Data Sekolah Dasar</h1>
+    
+      <!-- Tabel -->
+      <table>
+          <tr>
+              <th>No</th>
+              <th>Nama Sekolah</th>
+              <th>Lokasi</th>
+              <th>Alamat</th>
+          </tr>
+          <tr>
+              <td>1</td>
+              <td rowspan="2">SD Negeri 1</td>
+              <td>Jakarta</td>
+              <td>Jl. Merdeka No. 123</td>
+          </tr>
+          <tr>
+              <td>2</td>
+              <td>Bandung</td>
+              <td>Jl. Pahlawan No. 45</td>
+          </tr>
+          <tr>
+              <td>3</td>
+              <td colspan="3">SD Negeri 2</td>
+          </tr>
+          <tr>
+              <td>4</td>
+              <td>Surabaya</td>
+              <td>Jl. Sudirman No. 67</td>
+              <td>Jl. Pahlawan No. 12</td>
+          </tr>
+      </table>
+  
+        
+      <h1>Formulir Pendaftaran Sekolah Dasar</h1>
+      <form action="proses_pendaftaran.php" method="POST">
+          <!-- Label dan input untuk nama -->
+          <label for="nama">Nama Lengkap:</label>
+          <input type="text" id="nama" name="nama" required>
+          <br>
+  
+          <!-- Label dan input untuk usia -->
+          <label for="usia">Usia:</label>
+          <input type="number" id="usia" name="usia" min="6" max="12" required>
+          <br>
+  
+          <!-- Label dan input untuk alamat -->
+          <label for="alamat">Alamat:</label>
+          <input type="text" id="alamat" name="alamat" required>
+          <br>
+  
+          <!-- Label dan select untuk jenis kelamin -->
+          <label for="jenis_kelamin">Jenis Kelamin:</label>
+          <select id="jenis_kelamin" name="jenis_kelamin">
+              <option value="laki-laki">Laki-laki</option>
+              <option value="perempuan">Perempuan</option>
+          </select>
+          <br>
+  
+          <!-- Label dan textarea untuk catatan -->
+          <label for="catatan">Catatan Tambahan:</label>
+          <textarea id="catatan" name="catatan" rows="4" cols="50"></textarea>
+          <br>
+  
+          <!-- Tombol submit -->
+          <input type="submit" value="Daftar">
+      </form>
     </section>
-    <section>
-      <h2>Gambar Pendidikan Sekolah Menengah Atas (SMA)</h2>
-      <p>Seragam SMA menggunakan warna Abu putih yang mengartikan Ketenangan dan Kedewasaan.</p>
-      <img src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2023/05/16/3717949119.jpg" alt="Ilustrasi Pendidikan">
-  </section>
   </main>
   </body>
 </html>
